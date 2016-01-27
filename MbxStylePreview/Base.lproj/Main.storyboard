@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6k2-KW-F7u">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ofg-qa-RzE">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpW-wV-R39" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="6k2-KW-F7u" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fQe-Tz-KeB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2EI-fV-UHX"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-343" y="453"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PreviewViewController" customModule="MbxStylePreview" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fax-Rl-rsd" userLabel="Map Container View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TEk-qx-oD3">
+                                <rect key="frame" x="0.0" y="384" width="600" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="Tw6-m1-LsY"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Fax-Rl-rsd" secondAttribute="trailing" id="5qk-C6-Xvq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TEk-qx-oD3" secondAttribute="bottom" id="AOF-ck-aO2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fax-Rl-rsd" secondAttribute="bottom" id="PXo-Tq-Rtv"/>
+                            <constraint firstItem="TEk-qx-oD3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aJS-FJ-LQb"/>
+                            <constraint firstAttribute="trailing" secondItem="TEk-qx-oD3" secondAttribute="trailing" id="cwi-4h-ViI"/>
+                            <constraint firstItem="Fax-Rl-rsd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hgy-Sc-8mf"/>
+                            <constraint firstItem="Fax-Rl-rsd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="k62-fc-dkx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="n6x-mN-loJ"/>
+                    <connections>
+                        <outlet property="mapContainerView" destination="Fax-Rl-rsd" id="Spo-ll-HgN"/>
+                        <outlet property="pickerView" destination="TEk-qx-oD3" id="sKI-sw-6id"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="505"/>
+        </scene>
+        <!--Access View Controller-->
+        <scene sceneID="Bui-HR-0Wc">
+            <objects>
+                <viewController storyboardIdentifier="AccessViewController" id="V4P-84-2jk" customClass="AccessViewController" customModule="MbxStylePreview" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SDQ-kc-aEO"/>
+                        <viewControllerLayoutGuide type="bottom" id="VVM-Rq-uRk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oaV-FJ-yHj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E2j-0z-05M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="1348"/>
+        </scene>
+    </scenes>
+</document>
